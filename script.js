@@ -1,6 +1,31 @@
 class Book {
-    constructor(title, autor) {
+    constructor(title, author) {
         this.title = title;
-        this.autor = autor;
+        this.author = author;
     }
+}
+
+let library = [
+    {
+        name: 'Meditations',
+        author: 'Marcus Aurelius'
+    },
+    {
+        name: 'Moral letters to Lucilius',
+        author: 'Seneca the younger'
+    }
+]
+
+const addBookToLibrary = () => {
+    const newBook = new Book();
+    library.push(newBook);
+    updateLocalStorage();
+}
+
+const updateLocalStorage = () => {
+    localStorage.setItem('library', JSON.stringify(library));
+}
+
+const chechLocalStorage = () => {
+    library = JSON.parse(localStorage.getItem(library));
 }
