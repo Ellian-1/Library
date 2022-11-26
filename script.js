@@ -26,6 +26,12 @@ const deleteToLibrary = (book) => {
     library.splice(book, book + 1)
 }
 
+const selectFromLibrary = (booksLibrary, name) => {
+    for (let book of booksLibrary) {
+        book.name == name ? library.indexOf(book) : alert('The book is not in the library');
+    }
+}
+
 const updateLocalStorage = () => {
     localStorage.setItem('library', JSON.stringify(library));
 }
