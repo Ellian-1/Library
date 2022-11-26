@@ -36,6 +36,6 @@ const updateLocalStorage = () => {
     localStorage.setItem('library', JSON.stringify(library));
 }
 
-const chechLocalStorage = () => {
+const checkLocalStorage = () => {
     library = JSON.parse(localStorage.getItem(library));
 }
