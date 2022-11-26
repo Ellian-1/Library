@@ -22,6 +22,10 @@ const addBookToLibrary = () => {
     updateLocalStorage();
 }
 
+const deleteToLibrary = (book) => {
+    library.splice(book, book + 1)
+}
+
 const updateLocalStorage = () => {
     localStorage.setItem('library', JSON.stringify(library));
 }
