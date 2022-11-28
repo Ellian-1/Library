@@ -1,3 +1,11 @@
+const name = document.getElementById('name');
+const author = document.getElementById('author');
+const form = document.getElementById('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+})
+
 class Book {
     constructor(title, author) {
         this.title = title;
