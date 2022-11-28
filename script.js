@@ -1,9 +1,16 @@
-const name = document.getElementById('name');
+const nameBook = document.getElementById('name');
 const author = document.getElementById('author');
 const form = document.getElementById('form');
+const text = document.getElementById('text');
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
+    addBookToLibrary();
+    listOfBooks();
+    nameBook.value = "";
+    author.value = "";
+    //text.textContent = nameBook.value;
+
 })
 
 class Book {
@@ -25,7 +32,7 @@ let library = [
 ]
 
 const addBookToLibrary = () => {
-    const newBook = new Book();
+    const newBook = new Book(nameBook.value, author.value);
     library.push(newBook);
     updateLocalStorage();
 }
@@ -46,4 +53,24 @@ const updateLocalStorage = () => {
 
 const checkLocalStorage = () => {
     library = JSON.parse(localStorage.getItem(library));
+}
+
+const listOfBooks = () => {
+    checkLocalStorage();
+    library.forEach((book) => {
+        const dataBook = `
+        <div class="data-book">
+            <div class="book-title">
+                <h1>Name:</h1>
+                <p>${book.name}</p>
+            </div>
+            <div class="book-author">
+                <h1>Author:</h1>
+                <p>${book.author}</p>
+            </div>
+        </div>
+        `;
+
+        text.insertAdjacentElement('afterbegin', dataBook);
+    })
 }
