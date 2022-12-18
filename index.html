@@ -6,26 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
 </head>
-    <div class="card">
-        <div class="card-container">
-            <h1 id="title" class="heading">Library</h1>
-            <form action="#" id="form">
-                <div class="details">
-                    <label for="name">Name:
-                        <input type="text" name="input-field" id="name">
-                    </label>
-                </div>
-                <div class="details">
-                    <label for="author">Author:
-                        <input type="text" name=" input-field" id="author">
-                    </label>
-                </div>
-                <button type="submit" id="submit-button" class="button">Submit</button>
-            </form>
-            <div id="text"></div>
-        </div>
-    </div>
 <body>
+    <div class="library">
+        <div class="library-container">
+            <form action="#" id="formulary">
+                <h1 id="library-title">Library</h1>
+                <p id="library-paragraph">Complete the inputs for registring the book</p>
+                <div id="input-group">
+                    <div class="inputs" id="book-title">
+                        <label for="title">Title:
+                            <input type="text" id="title" class="input" placeholder="Title">
+                        </label>
+                        <span class="span-line"></span>
+                    </div>
+                    <div class="inputs" id="book-author">
+                        <label for="author">Author:
+                            <input type="text" id="author" class="author" placeholder="Author">
+                        </label>
+                        <span class="span-line"></span>
+                    </div>
+                    <div class="inputs" id="book-status">
+                        <label for="status">Status
+                            <select name="status" id="status" class="input">
+                                <option value="read">Read</option>
+                                <option value="not-read">Not read</option>
+                            </select>
+                        </label>
+                        <span class="span-line"></span>
+                    </div>
+                </div>  
+                <button type="submit" id="submit-button" class="button">Submit book</button>
+            </form>
+        </div>
+        <table id="table-of-books">
+            <thead>
+                <tr>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>Status</td>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
