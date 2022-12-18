@@ -1,2 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:whgt@300&display=swap');
 
+:root {
+    --box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    --library-bgc: rgb(246, 246, 246);
+    --white-color: #fff;
+}
