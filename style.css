@@ -28,3 +28,44 @@
     background-color: var(--white-color);
     box-shadow: var(--box-shadow);
 }
+
+#formulary {
+    width: 100%;
+    height: 100%;
+    padding: 4.5em 3em;
+}
+
+#library-title {
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+#library-paragraph {
+    font-weight: 300px;
+}
+
+#input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.inputs {
+    margin-top: 2.5em;
+}
+
+.inputs:focus {
+    color: blue;
+}
+
+.input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    padding: .6em .3em;
+    border-bottom: 1px solid #5757577e;
+    color: #706c6c;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
