@@ -69,3 +69,23 @@
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
 }
+
+#submit-button {
+    width: 100%;
+    color: var(--white-color);
+    background-color: #0d6efd;
+    border: none;
+    border-radius: .5em;
+    padding: .8em 0;
+    font-weight: 300px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#submit-button:hover {
+    background-color: #009EFF;
+}
+
+#submit-button:active {
+    background-color: #009EFF;
+    transform: translateY(5px);
+}
