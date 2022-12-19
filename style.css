@@ -90,3 +90,24 @@
     transform: translateY(5px);
 }
 
+#table-of-books {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 50%;
+    height: 75%;
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow);
+    padding: 0;
+}
+
+#table-of-books > thead {
+    background-color: rgb(52, 48, 73);
+    color: var(--white-color);
+}
+
+#table-of-books, thead, tr, td {
+    border: 1px solid rgb(52, 48, 73);
+    border-collapse: collapse;
+    text-align: center;
+}
