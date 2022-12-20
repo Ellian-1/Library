@@ -1,11 +1,10 @@
-class Book {
-    constructor(title, author) {
-        this.title = title;
-        this.author = author;
-    }
-}
+const form = document.getElementById('formulary');
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    addBookToLibrary();
+});
 
-let library = [
+let myLibrary = [
     {
         name: 'Meditations',
         author: 'Marcus Aurelius'
@@ -14,10 +13,23 @@ let library = [
         name: 'Moral letters to Lucilius',
         author: 'Seneca the younger'
     }
-]
+];
+
+class Book {
+    constructor(title, author, status) {
+        this.title = title;
+        this.author = author;
+        this.status = status;
+    }
+}
 
 const addBookToLibrary = () => {
-    const newBook = new Book(nameBook.value, author.value);
-    library.push(newBook);
-    updateLocalStorage();
+    const title = document.getElementById('title').value;
+    const author = document.getElementById('author').value;
+    const status = document.getElementById('status').value;
+    
+    const newBook = new Book(title, author, status);
+
+    myLibrary.push(newBook);
+    localStorage.setItem('library', JSON.stringify(myLibrary));
 }
